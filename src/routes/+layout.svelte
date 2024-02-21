@@ -1,12 +1,13 @@
 <script>
 	import '../app.css';
 	import Header from '../lib/components/Header.svelte';
+	import Footer from '../lib/components/Footer.svelte';
 </script>
 
-<div class="app font-body text-fw-blue">
+<div class="app text-fw-blue">
 	<Header></Header>
 	<main>
 		<slot />
 	</main>
-	<footer>Footer</footer>
+	<Footer></Footer>
 </div>
