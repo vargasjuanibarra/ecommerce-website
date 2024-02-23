@@ -17,17 +17,22 @@
 </script>
 
 <header>
-	<div class="padding-x py-6 border-b border-gray-300 flex items-center justify-between">
+	<div
+		class="padding-x py-6 bg-slate-50 border-b border-gray-300 flex items-center justify-between"
+	>
 		<div class="flex gap-16 items-center">
 			<Logo />
 			{#each headerLinks as link}
-				<a href={link.link} class="ml-4">
+				<a href={link.link} class="ml-4 cursor-pointer hidden md:block">
 					{link.label}
 				</a>
 			{/each}
 		</div>
-		<button>
+		<button class="hidden md:block">
 			<i class="fa-solid fa-cart-shopping"></i>
+		</button>
+		<button class="block md:hidden">
+			<i class="fa-solid fa-bars"></i>
 		</button>
 	</div>
 </header>

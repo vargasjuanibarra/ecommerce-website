@@ -24,7 +24,7 @@ export default {
         sm: "0 1px 10px rgba(0, 0, 0, 0.10)",
       },
       screens: {
-        xsm: "380px",
+        xsm: "360px",
       },
       backgroundImage: {
         "gradient-1": "url('$lib/images/gradient-1.jpg')",

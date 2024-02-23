@@ -2,7 +2,8 @@ import type { FooterSection } from "../types/Footer";
 
 
 export const footerSections: FooterSection[] = [
-  {
+  { 
+    id: '1',
     title: "Products",
     links: [
       {
@@ -27,7 +28,8 @@ export const footerSections: FooterSection[] = [
       },
     ],
   },
-  {
+  { 
+    id: '2',
     title: "Discounts",
     links: [
       {
@@ -40,7 +42,8 @@ export const footerSections: FooterSection[] = [
       },
     ],
   },
-  {
+  { 
+    id: '3',
     title: "About",
     links: [
       {

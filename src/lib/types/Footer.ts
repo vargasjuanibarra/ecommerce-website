@@ -1,4 +1,5 @@
 export type FooterSection = {
+  id: string;
   title: string;
   links: FooterLink[];
 };
