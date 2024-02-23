@@ -27,8 +27,7 @@ export default {
         xsm: "380px",
       },
       backgroundImage: {
-        "tech-rocket": "url('$lib/images/tech-rocket.jpg')",
-        "game-rocket": "url('$lib/images/game-rocket.jpg')",
+        "gradient-1": "url('$lib/images/gradient-1.jpg')",
       },
     }
   },

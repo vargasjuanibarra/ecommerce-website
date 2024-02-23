@@ -1,5 +1,6 @@
 <script>
 	import Carousel from '../lib/components/Carousel.svelte';
+	import CategorySection from '../lib/components/CategorySection.svelte';
 	import HeroSection from '../lib/components/HeroSection.svelte';
 </script>
 
@@ -10,5 +11,6 @@
 
 <div class="padding-x pb-16 bg-fw-grey">
 	<HeroSection />
+	<CategorySection />
 	<Carousel />
 </div>
