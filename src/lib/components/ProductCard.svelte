@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="max-w-[20vw] h-full p-8 pb-10 flex flex-col shadow-sm bg-white rounded-lg justify-between overflow-hidden hover:scale-105 transition-transform duration-300 ease-in-out"
+	class="w-full h-full p-8 pb-10 flex flex-col shadow-sm bg-white rounded-lg justify-between overflow-hidden md:w-[35vw] lg:w-[25vw] hover:scale-105 transition-transform duration-300 ease-in-out"
 >
 	<div>
 		<div class="w-full aspect-square rounded-xl mb-7 overflow-hidden flex justify-center">

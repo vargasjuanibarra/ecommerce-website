@@ -1,19 +1,20 @@
 <script lang="ts">
 	import type { HeaderLink } from '../types/Header';
 	import Logo from '$lib/icons/Logo.svelte';
+	import { headerLinks } from '../data/header-links';
+	import HeaderDrawer from './HeaderDrawer.svelte';
 
-	const headerLinks: HeaderLink[] = [
-		{
-			label: 'Home',
-			link: '/',
-			class: 'fa-solid fa-house'
-		},
-		{
-			label: 'Store',
-			link: '/store',
-			class: 'fa-solid fa-store'
-		}
-	];
+	const links: HeaderLink[] = headerLinks;
+	let isOpen = false;
+
+	function toggleDrawer() {
+		isOpen = !isOpen;
+		console.log(isOpen);
+	}
+
+	function close() {
+		isOpen = false;
+	}
 </script>
 
 <header>
@@ -22,7 +23,7 @@
 	>
 		<div class="flex gap-16 items-center">
 			<Logo />
-			{#each headerLinks as link}
+			{#each links as link}
 				<a href={link.link} class="ml-4 cursor-pointer hidden md:block">
 					{link.label}
 				</a>
@@ -31,8 +32,11 @@
 		<button class="hidden md:block">
 			<i class="fa-solid fa-cart-shopping"></i>
 		</button>
-		<button class="block md:hidden">
+		<button class="block md:hidden z-10" on:click={toggleDrawer}>
 			<i class="fa-solid fa-bars"></i>
 		</button>
+	</div>
+	<div class="md:hidden">
+		<HeaderDrawer {links} {isOpen} on:close={close} />
 	</div>
 </header>
