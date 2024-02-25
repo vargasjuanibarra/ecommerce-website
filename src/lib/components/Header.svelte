@@ -19,7 +19,7 @@
 
 <header>
 	<div
-		class="padding-x py-6 bg-slate-50 border-b border-gray-300 flex items-center justify-between"
+		class="padding-x py-2 bg-slate-50 border-b border-gray-300 flex items-center justify-between"
 	>
 		<div class="flex gap-16 items-center">
 			<a href="/">

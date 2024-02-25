@@ -22,23 +22,27 @@
 	}
 </script>
 
-<div class="mt-[10vw] flex justify-center items-center relative">
-	<button class="absolute -left-12 btn btn-circle mx-2 hidden lg:block" on:click={() => prevSlide()}
-		>❮</button
+<div class="mt-[2vw] flex justify-center items-center relative">
+	<div
+		class="flex items-center w-full md:p-4 rounded-box gap-8 overflow-hidden"
+		id="scrollContainer"
 	>
-	<div class="flex w-full md:p-4 rounded-box gap-8 overflow-hidden" id="scrollContainer">
+		<button
+			class="absolute -left-12 btn bg-transparent border-none mx-2 hidden lg:block"
+			on:click={() => prevSlide()}>❮</button
+		>
 		{#if productsArray.length > 0}
 			{#each productsArray as product, index}
-				<div class="carousel-item w-md xsm:max-md:w-full">
+				<div class="carousel-item xsm:max-xsm:w-full">
 					<CarouselProductCard {product} {productsPage} />
 				</div>
 			{/each}
 		{/if}
+		<button
+			class="absolute -right-12 btn bg-transparent border-none mx-2 hidden lg:block"
+			on:click={() => nextSlide()}>❯</button
+		>
 	</div>
-	<button
-		class="absolute -right-12 btn btn-circle mx-2 hidden lg:block"
-		on:click={() => nextSlide()}>❯</button
-	>
 </div>
 
 <style>

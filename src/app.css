@@ -10,6 +10,10 @@
   @apply px-4 md:px-20 xl:px-28;
 }
 
+.easeText {
+  @apply hover:scale-110 transition-transform duration-300 ease-in-out;
+}
+
 .logo-fill {
   fill: #f5f5f5;
 }

@@ -15,7 +15,7 @@
 	});
 </script>
 
-<div class="px-6 pb-16 bg-fw-grey mx-auto">
+<div class="px-6 pb-16 bg-white mx-auto">
 	<div class="md:w-full lg:hidden py-8">
 		<Filters {categories} />
 	</div>
@@ -24,7 +24,7 @@
 			<Filters {categories} />
 		</div>
 		<div class="flex pt-12 md:pt-20 flex-wrap max-w-[1065px] justify-center gap-6 lg:w-2/3">
-			{#each productsArray as product, index}
+			{#each productsArray as product}
 				<ProductCard {product} />
 			{/each}
 		</div>

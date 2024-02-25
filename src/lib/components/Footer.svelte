@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="bg-fw-darkblue text-white flex flex-col md:padding-x pb-12 md:pt-12 md:flex-row gap-8 lg:gap-16 xl:gap-28 relative justify-center"
+	class="bg-gray-600 text-white flex flex-col md:padding-x pb-12 md:pt-12 md:flex-row gap-8 lg:gap-16 xl:gap-28 relative justify-center"
 >
 	<div class="flex flex-col justify-between hidden md:block">
 		<LogoGray />

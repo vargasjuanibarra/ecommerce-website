@@ -28,6 +28,7 @@ export default {
       },
       backgroundImage: {
         "gradient-1": "url('$lib/images/gradient-1.jpg')",
+        "base-1": "url('$lib/images/pexels-tamanna-rumee-8767291.jpg')"
       },
     }
   },

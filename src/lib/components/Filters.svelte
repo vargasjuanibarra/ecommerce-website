@@ -4,10 +4,20 @@
 
 <div class="flex justify-center gap-2 xsm:flex-col xsm:items-center lg:hidden">
 	<div class=" justify-center rounded-b-lg px-4 block">
-		<button class="btn btn-wide btn-outline md:text-md xsm:text-sm font-medium">Filters</button>
+		<button class="btn btn-wide btn-outline md:text-md xsm:text-sm font-medium">
+			<span>
+				<i class="fa-sharp fa-solid fa-filter"></i>
+			</span>
+			Filters
+		</button>
 	</div>
 	<div class="rounded-b-lg">
-		<button class="btn btn-outline btn-wide md:text-md xsm:text-sm font-medium">Sort</button>
+		<button class="btn btn-outline btn-wide md:text-md xsm:text-sm font-medium">
+			<span>
+				<i class="fa-solid fa-arrow-up-short-wide"></i>
+			</span>
+			Sort</button
+		>
 	</div>
 </div>
 
