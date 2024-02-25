@@ -22,7 +22,9 @@
 		class="padding-x py-6 bg-slate-50 border-b border-gray-300 flex items-center justify-between"
 	>
 		<div class="flex gap-16 items-center">
-			<Logo />
+			<a href="/">
+				<Logo />
+			</a>
 			{#each links as link}
 				<a href={link.link} class="ml-4 cursor-pointer hidden md:block">
 					{link.label}
@@ -32,7 +34,7 @@
 		<button class="hidden md:block">
 			<i class="fa-solid fa-cart-shopping"></i>
 		</button>
-		<button class="block md:hidden z-10" on:click={toggleDrawer}>
+		<button class="block md:hidden z-10 px-4" on:click={toggleDrawer}>
 			<i class="fa-solid fa-bars"></i>
 		</button>
 	</div>

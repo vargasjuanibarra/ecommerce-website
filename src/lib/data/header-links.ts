@@ -7,8 +7,8 @@ export const headerLinks: HeaderLink[] = [
     class: 'fa-solid fa-house'
   },
   {
-    label: 'Store',
-    link: '/store',
+    label: 'Shop',
+    link: '/products',
     class: 'fa-solid fa-store'
   }
 ]

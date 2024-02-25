@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { products } from '../data/store';
-	import ProductCard from './ProductCard.svelte';
+	import CarouselProductCard from './CarouselProductCard.svelte';
 	import { get } from 'svelte/store';
 
 	const productsArray: any = get(products);
+	const productsPage: boolean = false;
 
 	onMount(() => {
 		console.log('productsArray', productsArray);
@@ -21,20 +22,6 @@
 	}
 </script>
 
-<!-- <div class="mt-[10vw] flex justify-center items-center">
-	<button class="btn btn-circle mx-2 hidden lg:block" on:click={() => prevSlide()}>❮</button>
-	<div class="carousel carousel-center w-full md:p-4 rounded-box gap-8" id="scrollContainer">
-		{#if productsArray.length > 0}
-			{#each productsArray as product, index}
-				<div class="carousel-item w-md xsm:max-md:w-full">
-					<ProductCard {product} {index} />
-				</div>
-			{/each}
-		{/if}
-	</div>
-	<button class="btn btn-circle mx-2 hidden lg:block" on:click={() => nextSlide()}>❯</button>
-</div> -->
-
 <div class="mt-[10vw] flex justify-center items-center relative">
 	<button class="absolute -left-12 btn btn-circle mx-2 hidden lg:block" on:click={() => prevSlide()}
 		>❮</button
@@ -43,7 +30,7 @@
 		{#if productsArray.length > 0}
 			{#each productsArray as product, index}
 				<div class="carousel-item w-md xsm:max-md:w-full">
-					<ProductCard {product} {index} />
+					<CarouselProductCard {product} {productsPage} />
 				</div>
 			{/each}
 		{/if}

@@ -18,29 +18,34 @@
 	/>
 
 	<div
-		class="flex flex-col text-fw-blue text-lg font-medium absolute xsm:w-3/4 w-1/3 h-full top-0 right-0 bg-white whitespace-nowrap pt-5"
+		class="flex flex-col text-fw-blue text-lg font-medium absolute xsm:flex-row xsm:justify-between xsm:max-sm:w-full sm:w-2/3 w-1/3 h-full top-0 right-0 bg-white whitespace-nowrap pt-5"
 	>
-		{#each links as link}
-			<div class="px-5 w-full py-3">
-				<button
-					class="w-min gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out"
-				>
-					<a href={link.link} class="ml-4 cursor-pointer">
-						<i class={link.class}></i>
-						<span>
-							{link.label}
-						</span>
+		<div>
+			{#each links as link}
+				<div class="md:px-5 w-full py-3">
+					<button
+						class="w-min gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out"
+					>
+						<a href={link.link} class="ml-4 cursor-pointer">
+							<i class={link.class}></i>
+							<span>
+								{link.label}
+							</span>
+						</a>
+					</button>
+				</div>
+			{/each}
+			<div class="md:px-5 w-full py-3">
+				<button class="w-min gap-2 flex items-center">
+					<a href="" class="ml-4 cursor-pointer">
+						<i class="fa-solid fa-cart-shopping"></i>
+						<span> Cart </span>
 					</a>
 				</button>
 			</div>
-		{/each}
-		<div class="px-5 w-full py-3">
-			<button class="w-min gap-2 flex items-center">
-				<a href="" class="ml-4 cursor-pointer">
-					<i class="fa-solid fa-cart-shopping"></i>
-					<span> Cart </span>
-				</a>
-			</button>
 		</div>
+		<span class="px-4 pt-3" on:click={close}>
+			<i class="fa-solid fa-xmark"></i>
+		</span>
 	</div>
 </div>
