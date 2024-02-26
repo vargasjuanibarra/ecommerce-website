@@ -23,10 +23,17 @@
 		<div class="gap-5 px-2 mx-2 md:w-60 xsm:max-lg:hidden">
 			<Filters {categories} />
 		</div>
-		<div class="flex pt-12 md:pt-20 flex-wrap max-w-[1065px] justify-center gap-6 lg:w-2/3">
-			{#each productsArray as product}
-				<ProductCard {product} />
-			{/each}
+		<div class="max-w-[1065px]">
+			<h2
+				class="text-center md:text-3xl font-bold text-white bg-red-700 w-max py-2 px-4 md:pr-[100%]"
+			>
+				Global Brand Deals
+			</h2>
+			<div class="flex pt-12 md:pt-12 flex-wrap justify-center gap-6 lg:max-w-fit">
+				{#each productsArray as product}
+					<ProductCard {product} />
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>

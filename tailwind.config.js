@@ -27,7 +27,7 @@ export default {
         xsm: "250px",
       },
       backgroundImage: {
-        "gradient-1": "url('$lib/images/gradient-1.jpg')",
+        "gradient-1": "url('$lib/images/pexels-codioful-(formerly-gradienta)-6984984.jpg')",
         "base-1": "url('$lib/images/pexels-tamanna-rumee-8767291.jpg')"
       },
     }

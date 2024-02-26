@@ -16,7 +16,7 @@
 </script>
 
 <a href={`/products/${product.id}`}>
-	<div class="xsm:w-60 md:w-48 xl:w-68 overflow-hidden">
+	<div class="xsm:w-40 md:w-48 xl:w-68 overflow-hidden">
 		<div>
 			<div class="w-full aspect-square rounded-xl mb-7 overflow-hidden flex justify-center">
 				<img

@@ -28,7 +28,7 @@
 		id="scrollContainer"
 	>
 		<button
-			class="absolute -left-12 btn bg-transparent border-none mx-2 hidden lg:block"
+			class="absolute left-0 btn bg-transparent border-none mx-2 hidden lg:block z-50"
 			on:click={() => prevSlide()}>❮</button
 		>
 		{#if productsArray.length > 0}
@@ -39,7 +39,7 @@
 			{/each}
 		{/if}
 		<button
-			class="absolute -right-12 btn bg-transparent border-none mx-2 hidden lg:block"
+			class="absolute right-0 btn bg-transparent border-none mx-2 hidden lg:block z-50"
 			on:click={() => nextSlide()}>❯</button
 		>
 	</div>

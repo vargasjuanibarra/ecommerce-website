@@ -17,7 +17,7 @@
 		class="bg-gradient-1 bg-cover py-4 md:py-12 flex justify-center items-center my-8 rounded-br-lg rounded-tl-lg"
 	>
 		<h2 class="text-center md:text-3xl font-bold text-white bg-red-700 w-max py-2 px-4">
-			Top Deals on Tech
+			Top Tech Deals
 		</h2>
 	</div>
 	<Carousel />
