@@ -63,10 +63,10 @@
 		<div class="md:hidden">
 			<div class="pt-2 pb-4">
 				<p class="text-xs pb-2">
-					Sale ends: <span class="text-red-600 text-xs font-semibold"> February 29, 2024</span>
+					Quantity: <span class="text-red-600 text-xs font-semibold">{product.rating.count}</span>
 				</p>
 				<p class="text-xs">SAVE $300</p>
-				<p class="text-lg lg:text-2xl font-bold text-red-600">$2499.99</p>
+				<p class="text-lg lg:text-2xl font-bold text-red-600">${product.price}</p>
 			</div>
 			<div>
 				<h3 class="text-sm py-4 md:text-base">Product Highlights</h3>
