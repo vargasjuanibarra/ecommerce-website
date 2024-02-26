@@ -22,7 +22,7 @@
 	}
 </script>
 
-<div class="mt-[2vw] flex justify-center items-center relative">
+<div class="mt-[2vw] flex justify-center items-center relative max-w-[1800px] mx-auto">
 	<div
 		class="flex items-center w-full md:p-4 rounded-box gap-8 overflow-hidden"
 		id="scrollContainer"
