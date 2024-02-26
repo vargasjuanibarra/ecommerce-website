@@ -26,7 +26,7 @@
 					<button
 						class="w-min gap-2 flex items-center hover:scale-110 transition-transform duration-300 ease-in-out"
 					>
-						<a href={link.link} class="ml-4 cursor-pointer">
+						<a href={link.link} class="ml-4 cursor-pointer" on:click={close}>
 							<i class={link.class}></i>
 							<span>
 								{link.label}
