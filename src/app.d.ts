@@ -8,6 +8,11 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+  declare class CartItem {
+    id: string;
+    quantity: number;
+  }
 }
 
 export {};

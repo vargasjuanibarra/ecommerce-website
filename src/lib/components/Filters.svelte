@@ -21,14 +21,14 @@
 	</div>
 </div>
 
-<div class="xsm:max-lg:hidden">
-	<div class="bg-slate-200 rounded-b-lg pt-28 pb-4 px-4">
+<div class="xsm:max-lg:hidden rounded-none">
+	<div class="bg-slate-200 pt-28 pb-4 px-4">
 		<div class=" text-md font-medium">Filters</div>
 	</div>
-	<details class="collapse collapse-arrow bg-slate-200 my-2">
+	<details class="collapse collapse-arrow bg-white my-1 rounded-none border-b">
 		<summary class="collapse-title text-md font-medium">Category</summary>
 		<div class="collapse-content">
-			<div>
+			<div class="grid divide-y">
 				{#if categories.length === 0}
 					<p class="text-lg py-2">No categories available</p>
 				{:else}
@@ -42,14 +42,14 @@
 			</div>
 		</div>
 	</details>
-	<details class="collapse collapse-arrow bg-slate-200 my-2">
+	<details class="collapse collapse-arrow bg-white my-1 rounded-none border-b">
 		<summary class="collapse-title text-md font-medium">Price</summary>
 		<div class="collapse-content">
 			<p>Lowest to Highest</p>
 			<p>Highest to Lowest</p>
 		</div>
 	</details>
-	<details class="collapse collapse-arrow bg-slate-200 my-2">
+	<details class="collapse collapse-arrow bg-white my-1 rounded-none border-b">
 		<summary class="collapse-title text-md font-medium">Rating</summary>
 		<div class="collapse-content">
 			<div class="flex justify-between items-center">

@@ -2,13 +2,26 @@
 	import { onMount } from 'svelte';
 	import Button from './Button.svelte';
 	import { ButtonVariant } from '../types/Button';
+	import { cartItems, addToCart, removeToCart } from '$lib/cart';
+	import { get } from 'svelte/store';
 
 	export let data;
 	let { product } = data;
 	let quantity = 1;
+	let cart = get(cartItems);
+
+	let cartItemIndex = cart.findIndex((item) => item.id === product.id);
+	let cartProduct = cart[cartItemIndex];
 
 	onMount(() => {
-		console.log('product', product);
+		console.log('cart', cart);
+	});
+
+	cartItems.subscribe((value) => {
+		cart = value;
+		cartItemIndex = cart.findIndex((item) => item.id === product.id);
+		cartProduct = cart[cartItemIndex];
+		console.log(cart);
 	});
 </script>
 
@@ -50,7 +63,11 @@
 		</div>
 
 		<div class=" w-full py-12 hidden md:block">
-			<Button variant={ButtonVariant.PRIMARY} dClass="w-full">Add to Cart</Button>
+			<Button
+				variant={ButtonVariant.PRIMARY}
+				dClass="w-full"
+				onClick={() => addToCart(product.id, quantity)}>Add to Cart</Button
+			>
 		</div>
 	</div>
 	<div class="px-4">
@@ -87,7 +104,11 @@
 				</button>
 			</div>
 			<div class="w-full block md:hidden">
-				<Button variant={ButtonVariant.PRIMARY} dClass="w-full">Add to Cart</Button>
+				<Button
+					variant={ButtonVariant.PRIMARY}
+					dClass="w-full"
+					onClick={() => addToCart(product.id, quantity)}>Add to Cart</Button
+				>
 			</div>
 		</div>
 	</div>
