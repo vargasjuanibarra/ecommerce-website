@@ -4,11 +4,11 @@ import { get, writable } from "svelte/store";
 export const cartItems = writable<CartItem[]>([]);
 
 
-export const addToCart = (id: string, quantity: number) => {
+export const addToCart = (product: Product, quantity: number) => {
   console.log('addToCart');
   let items = get(cartItems);
   let itemPosition = items.findIndex((item) => {
-    return item.id == id
+    return item.product.id == product.id
   })
 
   if(itemPosition !== -1) {
@@ -16,7 +16,7 @@ export const addToCart = (id: string, quantity: number) => {
     
     cartItems.update(() => {
       let updatedItems = items.map((item) => {
-        if (item.id === id) {
+        if (item.product.id === product.id) {
           return {
             ...item, quantity: item.quantity + quantity
           }
@@ -28,15 +28,15 @@ export const addToCart = (id: string, quantity: number) => {
   } else {
     // item is not in the cart
     cartItems.update(() => {
-      return [...items, {id, quantity: quantity}]
+      return [...items, {product: {...product}, quantity: quantity}]
     })
   }
 }
 
-export const removeToCart = (id: string, quantity: number) => {
+export const removeToCart = (product: Product, quantity: number) => {
   let items = get(cartItems);
   let itemPosition = items.findIndex((item) => {
-    return item.id == id
+    return item.product.id == product.id
   })
 
   if(items[itemPosition]?.quantity - quantity <= 0) {
@@ -45,7 +45,7 @@ export const removeToCart = (id: string, quantity: number) => {
 
   cartItems.update(() => {
     let updatedItems = items.map((item) => {
-      if (item.id === id) {
+      if (item.product.id === product.id) {
         return {
           ...item, quantity: item.quantity - quantity
         }

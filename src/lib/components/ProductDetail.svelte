@@ -10,18 +10,13 @@
 	let quantity = 1;
 	let cart = get(cartItems);
 
-	let cartItemIndex = cart.findIndex((item) => item.id === product.id);
+	let cartItemIndex = cart.findIndex((item) => item.product.id === product.id);
 	let cartProduct = cart[cartItemIndex];
-
-	onMount(() => {
-		console.log('cart', cart);
-	});
 
 	cartItems.subscribe((value) => {
 		cart = value;
-		cartItemIndex = cart.findIndex((item) => item.id === product.id);
+		cartItemIndex = cart.findIndex((item) => item.product.id === product.id);
 		cartProduct = cart[cartItemIndex];
-		console.log(cart);
 	});
 </script>
 
@@ -66,11 +61,18 @@
 			<Button
 				variant={ButtonVariant.PRIMARY}
 				dClass="w-full"
-				onClick={() => addToCart(product.id, quantity)}>Add to Cart</Button
+				onClick={() => addToCart(product, quantity)}>Add to Cart</Button
 			>
 		</div>
 	</div>
-	<div class="px-4">
+	<div class="px-4 relative">
+		<div class="p-4 absolute hidden md:flex">
+			<a href="/products">
+				<button class="btn btn-outline">
+					<i class="fa-solid fa-arrow-left"></i>
+				</button>
+			</a>
+		</div>
 		<div class="md:mt-8 py-4 md:px-4 xsm:max-md:w-xs md:max-w-md">
 			<img
 				src={product.image}

@@ -26,14 +26,14 @@
 
 	<div class="block md:hidden">
 		{#each footerSections as section, index}
-			<div class="collapse collapse-arrow bg-base-200">
+			<div class="collapse collapse-arrow bg-transparent rounded-none">
 				<input type="radio" name="accordion-1" />
-				<div class="collapse-title text-xl font-medium">
+				<div class="collapse-title text-xl font-medium border-b">
 					{section.title}
 				</div>
 				<div class="collapse-content">
 					{#each section.links as link}
-						<a href={link.link}><p>{link.name}</p></a>
+						<a href="/"><p>{link.name}</p></a>
 					{/each}
 				</div>
 			</div>
