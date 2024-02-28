@@ -1,7 +1,7 @@
 <svg
 	version="1.0"
 	xmlns="http://www.w3.org/2000/svg"
-	height="100"
+	height="60"
 	viewBox="0 0 818.000000 250.000000"
 	preserveAspectRatio="xMidYMid meet"
 	class="logo-fill"

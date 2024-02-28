@@ -20,13 +20,25 @@
 	});
 </script>
 
-<div class="pt-4 pb-8 md:flex md:flex-row-reverse md:justify-center">
+<div class="pt-4 pb-8 sm:flex sm:flex-row-reverse sm:justify-center">
 	<div class="md:bg-slate-50 px-4 max-w-sm relative">
-		<h2 class="md:pt-4 text-sm md:text-base font-bold">
+		<div class="flex gap-4 md:hidden">
+			<div class="">
+				<a href="/products">
+					<button class="btn btn-sm btn-outline">
+						<i class="fa-solid fa-arrow-left"></i>
+					</button>
+				</a>
+			</div>
+			<h2 class="md:pt-4 text-sm md:text-base font-bold">
+				{product.title}
+			</h2>
+		</div>
+		<h2 class="md:pt-4 text-sm md:text-base font-bold hidden md:block">
 			{product.title}
 		</h2>
 		<p class="pb-2 pt-4 text-xs md:text-base">{product.category}</p>
-		<div class="hidden md:block">
+		<div class="hidden sm:block">
 			<div class="pt-2 pb-4">
 				<p class="text-xs py-4 md:text-sm">
 					Quantity: <span class="text-red-600 text-xs font-semibold md:text-base">
@@ -73,13 +85,10 @@
 				</button>
 			</a>
 		</div>
-		<div class="md:mt-8 py-4 md:px-4 xsm:max-md:w-xs md:max-w-md">
-			<img
-				src={product.image}
-				alt="Samsung 65 4K UHD HDR QD-OLED Tizen Smart TV (QN65S92CAFXZC) - 2023 - Titan Black - Only at Best Buy"
-			/>
+		<div class="md:mt-8 py-4 md:px-4 min-w-60 md:w-80">
+			<img src={product.image} alt={product.title} />
 		</div>
-		<div class="md:hidden">
+		<div class="sm:hidden">
 			<div class="pt-2 pb-4">
 				<p class="text-xs pb-2">
 					Quantity: <span class="text-red-600 text-xs font-semibold">{product.rating.count}</span>

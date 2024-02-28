@@ -28,7 +28,7 @@
 		{#each footerSections as section, index}
 			<div class="collapse collapse-arrow bg-transparent rounded-none">
 				<input type="radio" name="accordion-1" />
-				<div class="collapse-title text-xl font-medium border-b">
+				<div class="collapse-title text-sm md:text-base font-medium border-b">
 					{section.title}
 				</div>
 				<div class="collapse-content">
@@ -40,8 +40,10 @@
 		{/each}
 	</div>
 	<div class="flex flex-col justify-center md:hidden block padding-x">
-		<LogoGray />
-		<div class="flex justify-center text-fw-dark-gray md:hidden block">
+		<div class="flex justify-center">
+			<LogoGray />
+		</div>
+		<div class="flex text-xs justify-center text-fw-dark-gray md:hidden block">
 			&copy; Copyright 2024 Juan E-commerce Store.
 		</div>
 	</div>
