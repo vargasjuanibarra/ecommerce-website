@@ -175,7 +175,7 @@
 				<a href="/checkout">
 					<Button
 						variant={ButtonVariant.PRIMARY}
-						dClass="w-full rounded-none bg-amber-400 text-black font-bold text-lg">Checkout</Button
+						dClass="w-full rounded-none bg-yellow-400 text-black font-bold text-lg">Checkout</Button
 					>
 				</a>
 			</div>

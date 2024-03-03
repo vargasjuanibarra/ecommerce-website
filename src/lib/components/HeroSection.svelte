@@ -7,7 +7,7 @@
 	<div>
 		<div class="flex justify-center items-center">
 			<h1
-				class="pt-6 flex flex-col text-[15vw] md:text-[10vw] leading-none text-slate-800 uppercase font-serif text-center items-center sm:text-start sm:items-start text-red-700"
+				class="pt-6 flex flex-col text-[15vw] md:text-[10vw] leading-none uppercase font-serif text-center items-center sm:text-start sm:items-start text-red-700"
 			>
 				Supreme<br />
 				<div class="relative flex text-[12vw] md: text-[10vw]">
