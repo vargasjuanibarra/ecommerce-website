@@ -82,11 +82,11 @@
 					<div class="flex min-w-48 max-w-80">
 						<div>
 							<div>
-								<h2 class="py-2 md:pt-4 px-2 text-xs md:text-sm text-wrap">
+								<h2 class="py-2 md:pt-4 px-2 text-xs md:text-sm text-wrap lg:text-lg">
 									{cart.product.title}
 								</h2>
 							</div>
-							<div class="flex justify-between gap-6 items-center w-60 px-2">
+							<div class="flex justify-between gap-6 items-center w-full px-2">
 								<div class="flex justify-center py-2">
 									<button
 										class="btn btn-square btn-outline btn-xs md:btn-sm rounded-none"
@@ -95,7 +95,7 @@
 										<i class="fa-solid fa-minus"></i>
 									</button>
 									<input
-										class="text-sm font-bold bg-transparent rounded-none border-b border-t border-gray-400 w-12 text-center remove-arrow h-xs"
+										class="text-sm font-bold bg-transparent rounded-none border-b border-t border-gray-400 w-12 text-center remove-arrow h-xs lg:text-lg"
 										type="number"
 										value={cart.quantity}
 									/>
@@ -107,7 +107,9 @@
 									</button>
 								</div>
 								<div>
-									<p class="pb-2 pt-2 text-sm md:text-base">${cart.product.price}</p>
+									<p class="pb-2 pt-2 text-sm md:text-base lg:text-lg font-semibold">
+										${cart.product.price}
+									</p>
 								</div>
 							</div>
 						</div>
@@ -116,7 +118,7 @@
 			{/each}
 		</div>
 
-		<div class="pt-4 md:pt-12 bg-slate-50 px-4 xs:w-80 sm:w-60 md:w-96 md:pb-28 md:pt-4">
+		<div class="pt-4 md:pt-12 bg-slate-50 px-4 xs:w-80 sm:w-60 md:w-96 md:pb-36 md:mb-28 md:pt-4">
 			<h2 class="md:pt-4 text-md md:text-lg xl:text-xl font-bold text-center border-b pb-4">
 				Order Summary
 			</h2>
@@ -126,21 +128,22 @@
           <p class="text-xs md:text-base" on:change={onChange}>${onItemTotalChange.toFixed(2)}</p>
         </div>
       </div> -->
-			<div class="pt-4 px-2 pb-4">
+			<div class=" px-2 py-12">
 				<div class="flex justify-between">
-					<p class="text-xs md:text-lg font-bold">Subtotal</p>
-					<p class="text-xs md:text-base font-bold">${onItemTotalChange.toFixed(2)}</p>
+					<p class="text-xs md:text-lg font-bold lg:text-lg">Subtotal</p>
+					<p class="text-xs md:text-base font-bold lg:text-lg">${onItemTotalChange.toFixed(2)}</p>
 				</div>
 			</div>
 			<div class="border-b pb-8">
 				<a href="/checkout">
 					<Button
 						variant={ButtonVariant.PRIMARY}
-						dClass="w-full rounded-none bg-yellow-400 text-black font-bold text-lg">Checkout</Button
+						dClass="w-full rounded-none bg-yellow-400 text-black font-bold text-lg xl:text-xl"
+						>Checkout</Button
 					>
 				</a>
 			</div>
-			<div class="pt-8 px-2 pb-4 text-xs sm:text-sm">
+			<div class="pt-8 px-2 pb-4 text-xs sm:text-sm lg:text-lg">
 				<p>One or more items in your cart require an account. Sign in or create an accout now</p>
 			</div>
 		</div>
