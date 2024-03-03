@@ -15,7 +15,7 @@
 
 <a href={`/products/${product.id}`}>
 	<div
-		class="w-full h-full p-8 pb-10 flex flex-col shadow-sm bg-white rounded-lg justify-between overflow-hidden md:w-md hover:scale-105 transition-transform duration-300 ease-in-out"
+		class="w-full h-full p-8 pb-10 flex flex-col shadow-sm bg-white rounded-lg justify-between overflow-hidden hover:scale-105 transition-transform duration-300 ease-in-out"
 	>
 		<div>
 			<div class="w-full aspect-square rounded-xl mb-7 overflow-hidden flex justify-center h-36">

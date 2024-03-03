@@ -2,7 +2,6 @@
 	import { get } from 'svelte/store';
 	import ProductCard from '$lib/components/ProductCard.svelte';
 	import { products } from '$lib/data/store';
-	import { onMount } from 'svelte';
 	import Filters from '$lib/components/Filters.svelte';
 
 	const productsArray: any = get(products);
@@ -20,7 +19,7 @@
 			<Filters {categories} />
 		</div>
 		<div class="max-w-[1065px]">
-			<h2 class="text-center md:text-3xl font-bold text-white bg-red-700 w-max py-2 px-4 lg:pr-80">
+			<h2 class="text-start md:text-3xl font-bold text-white bg-red-700 w-full py-2 px-4">
 				Global Brand Deals
 			</h2>
 			<div class="flex pt-12 md:pt-12 flex-wrap justify-center gap-6 lg:max-w-fit">

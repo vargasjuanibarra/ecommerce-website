@@ -4,6 +4,7 @@
 	import { ButtonVariant } from '../types/Button';
 	import { cartItems, addToCart, removeToCart } from '$lib/cart';
 	import { get } from 'svelte/store';
+	import { toast } from '@zerodevx/svelte-toast';
 
 	export let data;
 	let { product } = data;
@@ -18,6 +19,18 @@
 		cartItemIndex = cart.findIndex((item) => item.product.id === product.id);
 		cartProduct = cart[cartItemIndex];
 	});
+
+	function clickToAddToCart(product: Product, quantity: number) {
+		addToCart(product, quantity);
+		toast.push('Success!', {
+			theme: {
+				'--toastColor': 'mintcream',
+				'--toastBackground': 'rgba(72,187,120,0.9)',
+				'--toastBarBackground': '#2F855A',
+				'--toastBarHeight': 0
+			}
+		});
+	}
 </script>
 
 <div class="pt-4 pb-8 sm:flex sm:flex-row-reverse sm:justify-center">
@@ -45,13 +58,13 @@
 						{product.rating.count}</span
 					>
 				</p>
-				<p class="text-xs md:text-sm">SAVE $300</p>
+				<p class="text-xs md:text-sm line-through">SAVE $300</p>
 				<p class="text-2xl font-bold text-red-600">${product.price}</p>
 			</div>
 
 			<div>
 				<h3 class="text-sm py-4 md:text-base">Product Highlights</h3>
-				<p class="text-sm md:text-base">
+				<p class="text-xs md:text-sm">
 					{product.description}
 				</p>
 			</div>
@@ -69,11 +82,11 @@
 			</button>
 		</div>
 
-		<div class=" w-full py-12 hidden md:block">
+		<div class=" w-full py-12 hidden sm:block">
 			<Button
 				variant={ButtonVariant.PRIMARY}
-				dClass="w-full"
-				onClick={() => addToCart(product, quantity)}>Add to Cart</Button
+				dClass="w-full bg-amber-400 rounded-none text-xs md:text-base"
+				onClick={() => clickToAddToCart(product, quantity)}>Add to Cart</Button
 			>
 		</div>
 	</div>
@@ -85,7 +98,7 @@
 				</button>
 			</a>
 		</div>
-		<div class="md:mt-8 py-4 md:px-4 min-w-60 md:w-80">
+		<div class="md:mt-8 p-8 md:pt-12 md:px-4 max-w-80 mx-auto">
 			<img src={product.image} alt={product.title} />
 		</div>
 		<div class="sm:hidden">
@@ -93,12 +106,12 @@
 				<p class="text-xs pb-2">
 					Quantity: <span class="text-red-600 text-xs font-semibold">{product.rating.count}</span>
 				</p>
-				<p class="text-xs">SAVE $300</p>
+				<p class="text-xs line-through">SAVE $300</p>
 				<p class="text-lg lg:text-2xl font-bold text-red-600">${product.price}</p>
 			</div>
 			<div>
 				<h3 class="text-sm py-4 md:text-base">Product Highlights</h3>
-				<p class="text-sm md:text-base">
+				<p class="text-xs md:text-sm">
 					{product.description}
 				</p>
 			</div>
@@ -117,7 +130,7 @@
 			<div class="w-full block md:hidden">
 				<Button
 					variant={ButtonVariant.PRIMARY}
-					dClass="w-full"
+					dClass="w-full bg-amber-400 rounded-none"
 					onClick={() => addToCart(product.id, quantity)}>Add to Cart</Button
 				>
 			</div>

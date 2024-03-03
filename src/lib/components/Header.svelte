@@ -39,7 +39,7 @@
 					? 'flex'
 					: 'hidden'}
 			></div>
-			<a href="/checkout">
+			<a href="/cart">
 				<i class="fa-solid fa-cart-shopping"></i>
 			</a>
 		</button>

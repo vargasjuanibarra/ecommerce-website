@@ -38,7 +38,7 @@
 			<div class="md:px-5 w-full py-3 relative">
 				<div class="bg-red-400 rounded-full w-2 h-2 absolute top-3 right-12"></div>
 				<button class="w-min gap-2 flex items-center">
-					<a href="/checkout" class="ml-4 cursor-pointer" on:click={close}>
+					<a href="/cart" class="ml-4 cursor-pointer" on:click={close}>
 						<i class="fa-solid fa-cart-shopping"></i>
 						<span> Cart </span>
 					</a>

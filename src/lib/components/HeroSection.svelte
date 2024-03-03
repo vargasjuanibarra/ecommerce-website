@@ -7,7 +7,7 @@
 	<div>
 		<div class="flex justify-center items-center">
 			<h1
-				class="pt-6 flex flex-col text-[15vw] leading-none text-slate-800 uppercase font-serif text-center items-center sm:text-start sm:items-start text-red-800"
+				class="pt-6 flex flex-col text-[15vw] leading-none text-slate-800 uppercase font-serif text-center items-center sm:text-start sm:items-start text-red-700"
 			>
 				Supreme<br />
 				<div class="relative flex text-[12vw]">
@@ -26,11 +26,13 @@
 						Discover our curated selection of cutting-edge tech products from global brands designed
 						to empower your shopping experience.
 					</span>
-					<Button
-						variant={ButtonVariant.SECONDARY}
-						dClass="w-full hover:scale-105 transition-transform duration-300 ease-in-out  sm:text-xsm"
-						>Shop Products &rarr;</Button
-					>
+					<a href="/products">
+						<Button
+							variant={ButtonVariant.SECONDARY}
+							dClass="w-full hover:scale-105 transition-transform duration-300 ease-in-out  sm:text-xsm"
+							>Shop Products &rarr;</Button
+						>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -39,11 +41,13 @@
 				Discover our curated selection of cutting-edge tech products from global brands designed to
 				empower your shopping experience.
 			</span>
-			<Button
-				variant={ButtonVariant.SECONDARY}
-				dClass="w-full hover:scale-105 transition-transform duration-300 ease-in-out sm:text-xsm"
-				>Shop Products &rarr;</Button
-			>
+			<a href="/products">
+				<Button
+					variant={ButtonVariant.SECONDARY}
+					dClass="w-full hover:scale-105 transition-transform duration-300 ease-in-out sm:text-xsm"
+					>Shop Products &rarr;</Button
+				>
+			</a>
 		</div>
 	</div>
 </div>

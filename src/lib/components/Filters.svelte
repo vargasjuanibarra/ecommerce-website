@@ -35,7 +35,7 @@
 					{#each categories as category}
 						<div class="flex justify-between items-center">
 							<p class="sm:text-sm text-lg py-2">{category}</p>
-							<input type="checkbox" checked="checked" class="checkbox" />
+							<input type="checkbox" class="checkbox" />
 						</div>
 					{/each}
 				{/if}
@@ -44,12 +44,16 @@
 	</details>
 	<details class="collapse collapse-arrow bg-white my-1 rounded-none border-b">
 		<summary class="collapse-title text-md font-medium">Price</summary>
-		<div class="collapse-content">
-			<p>Lowest to Highest</p>
-			<p>Highest to Lowest</p>
+		<div class="flex justify-between items-center">
+			<p class="sm:text-sm text-lg py-2">Lowest to Highest</p>
+			<input type="checkbox" class="checkbox" />
+		</div>
+		<div class="flex justify-between items-center">
+			<p class="sm:text-sm text-lg py-2">Highest to Lowest</p>
+			<input type="checkbox" class="checkbox" />
 		</div>
 	</details>
-	<details class="collapse collapse-arrow bg-white my-1 rounded-none border-b">
+	<!-- <details class="collapse collapse-arrow bg-white my-1 rounded-none border-b">
 		<summary class="collapse-title text-md font-medium">Rating</summary>
 		<div class="collapse-content">
 			<div class="flex justify-between items-center">
@@ -73,5 +77,5 @@
 				<input type="checkbox" checked="checked" class="checkbox" />
 			</div>
 		</div>
-	</details>
+	</details> -->
 </div>
