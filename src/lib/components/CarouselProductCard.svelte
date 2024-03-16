@@ -4,10 +4,6 @@
 	export let product: any;
 	export let productsPage = false;
 
-	onMount(() => {
-		console.log(productsPage);
-	});
-
 	onDestroy(() => {
 		productsPage = false;
 	});

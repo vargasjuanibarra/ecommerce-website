@@ -16,7 +16,6 @@
 	}
 
 	cartItems.subscribe((value) => {
-		console.log(value);
 		cartProducts = value;
 	});
 

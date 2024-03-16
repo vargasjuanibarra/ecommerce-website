@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import Carousel from '../lib/components/Carousel.svelte';
 	import CategorySection from '../lib/components/CategorySection.svelte';
 	import HeroSection from '../lib/components/HeroSection.svelte';
+
+	export let data: any;
+	const { products } = data;
 </script>
 
 <svelte:head>
@@ -20,5 +23,5 @@
 			Top Tech Deals
 		</h2>
 	</div>
-	<Carousel />
+	<Carousel {products} />
 </div>

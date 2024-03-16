@@ -5,7 +5,6 @@ export const cartItems = writable<CartItem[]>([]);
 
 
 export const addToCart = (product: Product, quantity: number) => {
-  console.log('addToCart');
   let items = get(cartItems);
   let itemPosition = items.findIndex((item) => {
     return item.product.id == product.id

@@ -1,15 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { products } from '../data/store';
 	import CarouselProductCard from './CarouselProductCard.svelte';
-	import { get } from 'svelte/store';
 
-	const productsArray: any = get(products);
+	export let products: any;
 	const productsPage: boolean = false;
-
-	onMount(() => {
-		console.log('productsArray', productsArray);
-	});
 
 	function nextSlide() {
 		let container = document.getElementById('scrollContainer');
@@ -31,8 +24,8 @@
 			class="absolute left-0 btn bg-transparent border-none mx-2 hidden lg:block z-50"
 			on:click={() => prevSlide()}>❮</button
 		>
-		{#if productsArray.length > 0}
-			{#each productsArray as product, index}
+		{#if products.length > 0}
+			{#each products as product, index}
 				<div class="carousel-item xsm:max-xsm:w-full">
 					<CarouselProductCard {product} {productsPage} />
 				</div>

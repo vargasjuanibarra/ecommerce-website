@@ -1,14 +1,10 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte';
+	import { onDestroy } from 'svelte';
 	import { ButtonVariant } from '../types/Button';
 	import Button from './Button.svelte';
 
 	export let product: any;
 	export let productsPage = false;
-
-	onMount(() => {
-		console.log(productsPage);
-	});
 
 	onDestroy(() => {
 		productsPage = false;

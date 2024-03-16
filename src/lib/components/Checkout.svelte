@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { ButtonVariant } from '../types/Button';
 	import Button from './Button.svelte';
-	import img from '$lib/images/laptop.png';
-	import { addToCart, cartItems, removeToCart } from '../cart';
+	import { cartItems } from '../cart';
 
 	export let cartProducts: CartItem[] = [];
 	let onItemTotalChange = 0;
@@ -18,14 +17,12 @@
 			onItemTotalChange += cartItem;
 		});
 	}
-
 	$: {
 		total = 0;
 		total += onItemTotalChange + tax + shipping;
 	}
 
 	cartItems.subscribe((value) => {
-		console.log(value);
 		cartProducts = value;
 	});
 
@@ -48,7 +45,7 @@
 				<label
 					class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
 				>
-					<input type="text" class="input-md" placeholder="First Name" />
+					<input type="text" class="grow" placeholder="First Name" />
 				</label>
 				<label
 					class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
@@ -58,19 +55,19 @@
 			</div>
 			<div class="pb-4">
 				<label class="input input-bordered flex bg-transparent rounded-none items-center gap-2">
-					<input type="text" class="input-md" placeholder="Email" />
+					<input type="text" class="grow" placeholder="Email" />
 				</label>
 			</div>
 			<div class="pb-4">
 				<label class="input input-bordered flex bg-transparent rounded-none items-center gap-2">
-					<input type="text" class="input-md" placeholder="Address" />
+					<input type="text" class="grow" placeholder="Address" />
 				</label>
 			</div>
 			<div class="flex flex-col lg:flex-row gap-4 pb-4">
 				<label
 					class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
 				>
-					<input type="text" class="input-md" placeholder="City" />
+					<input type="text" class="grow" placeholder="City" />
 				</label>
 				<label
 					class="input input-bordered flex bg-transparent items-center rounded-none gap-2 w-full"
