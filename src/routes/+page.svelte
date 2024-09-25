@@ -4,8 +4,9 @@
 	import HeroSection from '../lib/components/HeroSection.svelte';
 
 	export let data: any;
+	let featuredProducts: any;
 	$: ({ products } = data);
-	console.log('products', products);
+	$: featuredProducts = products.filter((product: any) => product.category === 'electronics');
 </script>
 
 <svelte:head>
@@ -24,5 +25,5 @@
 			Top Tech Deals
 		</h2>
 	</div>
-	<Carousel {products} />
+	<Carousel products={featuredProducts} />
 </div>
