@@ -5,11 +5,9 @@
 	import { SvelteToast } from '@zerodevx/svelte-toast';
 </script>
 
-<div class="app text-fw-blue">
+<div class="app text-fw-blue bg-white">
 	<SvelteToast />
 	<Header></Header>
-	<main>
-		<slot />
-	</main>
+	<slot />
 	<Footer></Footer>
 </div>

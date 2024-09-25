@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="bg-gray-600 text-white flex flex-col md:padding-x pb-12 md:pt-12 md:flex-row gap-8 lg:gap-16 xl:gap-28 relative justify-center"
+	class="bg-gray-200 flex flex-col md:padding-x pb-12 md:pt-12 md:flex-row gap-8 lg:gap-16 xl:gap-28 relative bottom-0 justify-center"
 >
 	<div class="flex flex-col justify-between hidden md:block">
 		<LogoGray />
@@ -48,25 +48,3 @@
 		</div>
 	</div>
 </div>
-<!-- 
-<div class="collapse collapse-arrow bg-base-200">
-	<input type="radio" name="my-accordion-2" checked="checked" />
-	<div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-	<div class="collapse-content">
-		<p>hello</p>
-	</div>
-</div>
-<div class="collapse collapse-arrow bg-base-200">
-	<input type="radio" name="my-accordion-2" />
-	<div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-	<div class="collapse-content">
-		<p>hello</p>
-	</div>
-</div>
-<div class="collapse collapse-arrow bg-base-200">
-	<input type="radio" name="my-accordion-2" />
-	<div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-	<div class="collapse-content">
-		<p>hello</p>
-	</div>
-</div> -->

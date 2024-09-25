@@ -7,7 +7,7 @@
 </script>
 
 <button
-	class={`flex gap-1 items-center justify-center rounded-lg py-3 text-sm font-sans normal-case font-medium easeText
+	class={`flex gap-1 items-center justify-center rounded-lg py-3 text-sm font-sans normal-case font-medium
   ${dClass} 
   ${
 		variant === ButtonVariant.PRIMARY

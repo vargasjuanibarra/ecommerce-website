@@ -2,6 +2,7 @@
 	import { onDestroy } from 'svelte';
 	import { ButtonVariant } from '../types/Button';
 	import Button from './Button.svelte';
+	import image from '../images/images.png';
 
 	export let product: any;
 	export let productsPage = false;
@@ -17,16 +18,12 @@
 			<div class="w-full aspect-square rounded-xl mb-7 overflow-hidden flex justify-center">
 				<img
 					class="w-md py-4 object-cover scale-image cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
-					src={product.image}
+					src={image}
 					alt="Product"
+					loading="lazy"
 				/>
 			</div>
 		</div>
-
-		<!-- <span class="font-semibold text-lg block mb-6 text-fw-black">
-			${product.price}
-		</span> -->
-		<!-- <Button variant={ButtonVariant.PRIMARY} dClass="w-full">Add to cart</Button> -->
 	</div>
 	<div class="py-2">
 		<div class="flex justify-between">

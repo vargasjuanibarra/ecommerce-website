@@ -14,9 +14,10 @@
 				class="scale-image object-cover h-full w-full hover:scale-105 transition-transform duration-300 ease-in-out"
 				src={gadjets}
 				alt="Laptop Discounts"
+				loading="lazy"
 			/>
 			<span
-				class="text-white absolute px-5 right-0 text-center lg:left-1/2 bottom-5 lg:top-12 lg:bottom-auto lg:-translate-x-1/2"
+				class="text-white absolute px-5 right-0 text-center lg:left-1/2 bottom-5 lg:top-12 lg:bottom-auto lg:-translate-x-1/2 bg-gray-400 bg-opacity-70 rounded"
 			>
 				Kickoff New Year with 15% Discount on Laptops
 			</span>
@@ -35,8 +36,11 @@
 					class="scale-image object-cover h-full w-full hover:scale-105 transition-transform duration-300 ease-in-out"
 					src={jewelry}
 					alt="Jewelry Collection"
+					loading="lazy"
 				/>
-				<span class="text-white absolute px-5 left-0 bottom-5"> Smart Watch Collections </span>
+				<span class="text-white absolute px-5 left-0 bottom-5 bg-gray-400 bg-opacity-70 rounded">
+					Smart Watch Collections
+				</span>
 			</a>
 		</div>
 		<div class="w-full rounded-lg h-48 lg:h-full overflow-hidden relative cursor-pointer">
@@ -45,8 +49,11 @@
 					class="scale-image object-cover h-full w-full hover:scale-105 transition-transform duration-300 ease-in-out"
 					src={mensClothes}
 					alt="mens Clothes Collection"
+					loading="lazy"
 				/>
-				<span class="text-white absolute px-5 right-0 bottom-5"> Men's Clothing </span>
+				<span class="text-white absolute px-5 left-0 bottom-5 bg-gray-400 bg-opacity-70 rounded">
+					Men's Clothing
+				</span>
 			</a>
 		</div>
 		<div class="w-full rounded-lg h-48 lg:h-full overflow-hidden relative cursor-pointer">
@@ -55,8 +62,11 @@
 					class="scale-image object-cover h-full w-full hover:scale-105 transition-transform duration-300 ease-in-out"
 					src={womensClothes}
 					alt="Large Selection of Keyboards"
+					loading="lazy"
 				/>
-				<span class="text-white absolute px-5 left-0 bottom-5">Women's Clothing</span>
+				<span class="text-white absolute px-5 left-0 bottom-5 bg-gray-400 bg-opacity-70 rounded"
+					>Women's Clothing</span
+				>
 			</a>
 		</div>
 	</div>

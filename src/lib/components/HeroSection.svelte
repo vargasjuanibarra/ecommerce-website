@@ -9,15 +9,11 @@
 			<h1
 				class="pt-6 flex flex-col text-[15vw] md:text-[10vw] leading-none uppercase font-serif text-center items-center sm:text-start sm:items-start text-red-700"
 			>
-				Supreme<br />
+				BEST<br />
 				<div class="relative flex text-[12vw] md: text-[10vw]">
-					<span class="text-red-500">Sale</span>
-					<!-- <img
-            src="src/lib/images/shopping-bag.png"
-            alt="Exclusive Laptops Gaming Laptops"
-            class="absolute left-[14vw] -top-[12vw] w-[44vw]"
-          /> -->
-					<span class="bg-base-1 bg-cover bg-clip-text text-transparent"> Station</span>
+					<span class="bg-base-1 bg-cover bg-clip-text text-transparent">BARGAIN</span>
+
+					<span class="text-red-700"> STORE</span>
 				</div>
 			</h1>
 			<div class="gap-5 px-4">

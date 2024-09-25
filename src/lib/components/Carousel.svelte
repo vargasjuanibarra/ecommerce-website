@@ -30,6 +30,8 @@
 					<CarouselProductCard {product} {productsPage} />
 				</div>
 			{/each}
+		{:else}
+			<p>No Products Found</p>
 		{/if}
 		<button
 			class="absolute right-0 btn bg-transparent border-none mx-2 hidden lg:block z-50"

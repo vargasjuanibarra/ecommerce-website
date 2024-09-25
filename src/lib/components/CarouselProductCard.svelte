@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
-
+	import image from '$lib/images/images.png';
 	export let product: any;
 	export let productsPage = false;
 
@@ -11,23 +11,19 @@
 
 <a href={`/products/${product.id}`}>
 	<div
-		class="w-full h-full p-8 pb-10 flex flex-col shadow-sm bg-white rounded-lg justify-between overflow-hidden hover:scale-105 transition-transform duration-300 ease-in-out"
+		class="w-full h-full p-6 pb-10 flex flex-col shadow-sm bg-white rounded-lg justify-between overflow-hidden hover:scale-105 transition-transform duration-300 ease-in-out"
 	>
 		<div>
-			<div class="w-full aspect-square rounded-xl mb-7 overflow-hidden flex justify-center h-36">
+			<div class="w-full aspect-square rounded-xl overflow-hidden flex justify-center h-48">
 				<img
-					class="w-md h-full py-4 object-cover scale-image cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
-					src={product.image}
+					class="w-md h-full py-4 object-cover scale-image cursor-pointer"
+					src={image}
 					alt="Product"
 				/>
 			</div>
 
-			<!-- <button
-				class="w-min whitespace-nowrap font-bold xsm:text-sm text-fw-blue lg:text-xl mb-6 block"
-			> -->
 			<div class="w-full text-wrap xsm:text-sm text-fw-blue lg:text-lg mb-2 block">
 				{product.title.substring(0, 30)}
-				<!-- {product.title.split(' ').slice(0, 3).join(' ')} -->
 			</div>
 		</div>
 

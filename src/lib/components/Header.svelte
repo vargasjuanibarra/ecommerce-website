@@ -22,16 +22,19 @@
 </script>
 
 <header>
-	<div class="padding-x bg-slate-50 border-b border-gray-300 flex items-center justify-between">
-		<div class="flex gap-16 items-center">
-			<a href="/">
-				<Logo />
-			</a>
-			{#each links as link}
-				<a href={link.link} class="ml-4 cursor-pointer hidden md:block hover:font-semibold">
-					{link.label}
+	<div class="bg-slate-50 border-b border-gray-300 flex items-center justify-between px-4">
+		<div class="flex items-center">
+			<div class="flex gap-16 items-center">
+				<a href="/">
+					<Logo />
 				</a>
-			{/each}
+			</div>
+			<div class="flex gap-4 justify-start">
+				<a href="/" class="ml-4 cursor-pointer hidden md:block hover:font-semibold"> Home </a>
+				<a href="/products" class="ml-4 cursor-pointer hidden md:block hover:font-semibold">
+					Shop
+				</a>
+			</div>
 		</div>
 		<button class="hidden md:block relative">
 			<div

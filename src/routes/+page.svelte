@@ -4,11 +4,12 @@
 	import HeroSection from '../lib/components/HeroSection.svelte';
 
 	export let data: any;
-	const { products } = data;
+	$: ({ products } = data);
+	console.log('products', products);
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>BestBargain</title>
 	<meta name="description" content="Juan E-commerce Store" />
 </svelte:head>
 
