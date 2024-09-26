@@ -38,7 +38,7 @@
 			<div class="flex-col gap-4 flex mb-4">
 				{#each cartProducts as cart}
 					<div class="flex bg-gray-100 p-4">
-						<img src={image} alt={cart.product.title} loading="lazy" class="w-32" />
+						<img src={cart.product.image} alt={cart.product.title} loading="lazy" class="w-32" />
 						<div class="flex w-full">
 							<div class="w-full">
 								<div class="flex justify-between items-center mb-4">

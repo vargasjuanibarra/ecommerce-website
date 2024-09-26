@@ -17,7 +17,7 @@
 			<div class="w-full aspect-square rounded-xl overflow-hidden flex justify-center h-48">
 				<img
 					class="w-md h-full py-4 object-cover scale-image cursor-pointer"
-					src={image}
+					src={product.image}
 					alt="Product"
 				/>
 			</div>

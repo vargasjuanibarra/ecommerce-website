@@ -18,7 +18,7 @@
 			<div class="w-full aspect-square rounded-xl mb-7 overflow-hidden flex justify-center">
 				<img
 					class="w-md py-4 object-cover scale-image cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
-					src={image}
+					src={product.image}
 					alt="Product"
 					loading="lazy"
 				/>

@@ -33,12 +33,11 @@
 	}
 </script>
 
-<div class="sm:grid sm:grid-cols-6 sm:gap-4">
+<div class="sm:grid sm:grid-cols-6 sm:gap-4 my-8">
 	<div class="col-span-3 mb-8">
-		<div class="relative">
-			<div class="flex"></div>
-			<div class="mx-auto xs:max-w-96 md:w-full">
-				<img src={image} alt={product.title} loading="lazy" />
+		<div class="relative bg-slate-50 p-4">
+			<div class="mx-auto xs:max-w-96 md:w-[60%] flex justify-center px-8">
+				<img src={product.image} alt={product.title} loading="lazy" />
 			</div>
 		</div>
 	</div>

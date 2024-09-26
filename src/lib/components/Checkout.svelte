@@ -11,6 +11,13 @@
 	let total = 0;
 	let cartItem = 0;
 
+	let firstName = '';
+	let lastName = '';
+	let email = '';
+	let address = '';
+	let mobileNumber = '';
+	let city = '';
+
 	$: {
 		onItemTotalChange = 0;
 		cartProducts.forEach((cart) => {
@@ -46,40 +53,88 @@
 							Delivery Details
 						</h2>
 					</div>
-					<div class="flex flex-col lg:flex-row gap-4 pb-4">
-						<label
-							class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
-						>
-							<input type="text" class="grow" placeholder="First Name" />
-						</label>
-						<label
-							class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
-						>
-							<input type="text" class="grow" placeholder="Last Name" />
-						</label>
-					</div>
-					<div class="pb-4">
-						<label class="input input-bordered flex bg-transparent rounded-none items-center gap-2">
-							<input type="text" class="grow" placeholder="Email" />
-						</label>
-					</div>
-					<div class="pb-4">
-						<label class="input input-bordered flex bg-transparent rounded-none items-center gap-2">
-							<input type="text" class="grow" placeholder="Address" />
-						</label>
-					</div>
-					<div class="flex flex-col lg:flex-row gap-4 pb-4">
-						<label
-							class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
-						>
-							<input type="text" class="grow" placeholder="City" />
-						</label>
-						<label
-							class="input input-bordered flex bg-transparent items-center rounded-none gap-2 w-full"
-						>
-							<input type="text" class="grow" placeholder="Mobile Number" />
-						</label>
-					</div>
+					<form method="post">
+						<div class="flex flex-col lg:flex-row gap-4 pb-4">
+							<label
+								class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
+							>
+								<input
+									type="text"
+									class="grow"
+									placeholder="First Name"
+									name="firstName"
+									value={firstName}
+									required
+								/>
+							</label>
+							<label
+								class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
+							>
+								<input
+									type="text"
+									class="grow"
+									placeholder="Last Name"
+									name="lastName"
+									value={lastName}
+									required
+								/>
+							</label>
+						</div>
+						<div class="pb-4">
+							<label
+								class="input input-bordered flex bg-transparent rounded-none items-center gap-2"
+							>
+								<input
+									type="text"
+									class="grow"
+									placeholder="Email"
+									name="email"
+									value={email}
+									required
+								/>
+							</label>
+						</div>
+						<div class="pb-4">
+							<label
+								class="input input-bordered flex bg-transparent rounded-none items-center gap-2"
+							>
+								<input
+									type="text"
+									class="grow"
+									placeholder="Address"
+									name="address"
+									value={address}
+									required
+								/>
+							</label>
+						</div>
+						<div class="flex flex-col lg:flex-row gap-4 pb-4">
+							<label
+								class="input input-bordered flex bg-transparent rounded-none items-center gap-2 w-full"
+							>
+								<input
+									type="text"
+									class="grow"
+									placeholder="City"
+									name="city"
+									value={address}
+									required
+								/>
+							</label>
+							<label
+								class="input input-bordered flex bg-transparent items-center rounded-none gap-2 w-full"
+							>
+								<input
+									type="text"
+									class="grow"
+									placeholder="Mobile Number"
+									name="mobileNumber"
+									value={mobileNumber}
+									required
+								/>
+							</label>
+						</div>
+					</form>
 					<div class="px-4 pt-4 pb-2">
 						<p class="font-semibold text-xs md:text-sm lg:text-md">
 							**Shipping fees and taxes will vary on your location
@@ -95,7 +150,7 @@
 						<div class="bg-slate-50 px-4 py-2 min-w-2xl border-b md:w-2xl h-full block">
 							<div class="flex items-center w-full">
 								<div class="flex w-20 lg:w-28 h-full p-4">
-									<img src={image} alt={cart.product.title} loading="lazy" />
+									<img src={cart.product.image} alt={cart.product.title} loading="lazy" />
 								</div>
 								<div class="w-full px-2">
 									<div>
